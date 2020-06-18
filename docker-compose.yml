@@ -1,9 +1,9 @@
 version: '3.7'
 services:
         ropsten:
-                image: ethereum/client-go:v1.9.10
+                image: multigeth/multi-geth:version-1.9.10
                 restart: on-failure
                 network_mode: host
-                command: "--nousb --syncmode 'light' --rpc --rpcaddr 'localhost' --rpcport 5555 --testnet"
+                command: "--nousb --syncmode 'light' --rpc --rpcaddr 'localhost' --rpcport 8080 --testnet"
                 volumes:
                        - "$PWD/data:/root/.ethereum"
